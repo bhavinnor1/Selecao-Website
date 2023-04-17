@@ -7,7 +7,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link rel="stylesheet" href="style.css">
-
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+	<style>
+		* {
+			font-family: Lato;
+		}
+	</style>
 </head>
 
 <body>
@@ -20,7 +25,17 @@
 					Selecao
 				</div>
 				<div>
-					<button class="hb" onclick="haambagu()">&#8801;</button>
+					<!-- abcdefg
+					<label class="toggle" for="toggle">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</label> -->
+					<button class="hb" onclick="hamburger()">
+						<div id="bar1" class="bar"></div>
+						<div id="bar2" class="bar"></div>
+						<div id="bar3" class="bar"></div>
+					</button>
 				</div>
 			</div>
 			<!-- </div> -->
@@ -28,14 +43,13 @@
 			<!-- <div style="display: block;"></div> -->
 			<div id="dd" class="navlinks">
 				<ul>
-					<li class="nav-li">Home</li>
-					<li class="nav-li">About</li>
-					<li class="nav-li">Services</li>
-					<li class="nav-li">Portfolio</li>
-					<li class="nav-li">Pricing</li>
-					<li class="nav-li">Team</li>
-					<li class="nav-li">Dropdown</li>
-					<li class="nav-li">Contact</li>
+					<li class="nav-li"><a href="#home">Home</a></li>
+					<li class="nav-li"><a href="#about">About</a></li>
+					<li class="nav-li"><a href="#services">Services</a></li>
+					<li class="nav-li"><a href="#portfolio">Portfolio</a></li>
+					<li class="nav-li"><a href="#pricing">Pricing</a></li>
+					<li class="nav-li"><a href="#team">Team</a></li>
+					<li class="nav-li"><a href="#contact">Contact</a></li>
 				</ul>
 			</div>
 			<!-- </div> -->
@@ -43,7 +57,7 @@
 		</div>
 	</div>
 
-	<div class="color">
+	<div class="color" id="home">
 		<div class="grid">
 			<div>
 				<button id="btn">&lt;</button>
@@ -54,8 +68,7 @@
 						<div class="welcome">
 
 							<div id="header" class="wtc">
-								Welcome To Selecao
-							</div>
+								Vishal cao</div>
 							<div id="para" class="wtcinfo">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 								Explicabo illo
 								deserunt
@@ -74,7 +87,8 @@
 						<div class="welcome">
 
 							<div id="header" class="wtc">
-								Vishal cao</div>
+								Welcome To Selecao
+							</div>
 							<div id="para" class="wtcinfo">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 								Explicabo illo
 								deserunt
@@ -113,21 +127,25 @@
 			<div>
 				<button id="btn2">&gt;</button>
 			</div>
-		</div>
 
+		</div>
+		<div class="waveop">
+			<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+				viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+				<defs>
+					<path id="gentle-wave"
+						d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+				</defs>
+				<g class="parallax">
+					<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+					<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+					<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+					<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+				</g>
+			</svg>
+		</div>
 	</div>
-	<!-- <div class="wtransform">
-		<div class="circle"></div>
-		<div class="circle2"></div>
-		<div class="circle3"></div>
-		<div class="circle4"></div>
-		<div class="circle5"></div>
-		<div class="circle6"></div>
-		<div class="circle7"></div>
-		<div class="circle8"></div>
-		<div class="circle9"></div>
-	</div> -->
-	<div class="container">
+	<div class="container" id="about">
 		<div class="about">
 			<div>
 				<div class="a">ABOUT</div>
@@ -162,7 +180,7 @@
 	<div class="container">
 		<div class="buttons">
 			<button id="blogger" onclick="blogger()" class="b"
-				style="background-color: coral; box-sizing: border-box; height: 100px; width:auto;">
+				style="background-color: orangered; box-sizing: border-box; height: 100px; width:auto;">
 				<svg id="bli" fill="white" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 					version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 24 24"
 					style="enable-background:new 0 0 24 24;width:100%; height: 100%; padding: 3%;box-sizing: border-box;"
@@ -272,16 +290,17 @@
 	</div>
 	<div class="container full-bleed2" style="background-color: #302c3c;">
 		<div class="flex2">
-			<div>
-				<div style="color: aliceblue;" class="title">Call To Action</div>
-				<div style="color: aliceblue;font-size: 20px;">Duis aute irure dolor in reprehenderit in voluptate velit
+			<div class="center-align">
+				<div style="color: aliceblue;" class="title center-align">Call To Action</div>
+				<div style="color: aliceblue;font-size: 20px;" class="center-align">Duis aute irure dolor in
+					reprehenderit in voluptate velit
 					esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
 					culpa qui officia deserunt mollit anim id est laborum.</div>
 			</div>
-			<div><button id="cta" href="#">CALL TO ACTION</button></div>
+			<div class="center-align"><button id="cta" href="#">CALL TO ACTION</button></div>
 		</div>
 	</div>
-	<div class="container">
+	<div class="container" id="services">
 		<div>
 			<div class="a">SERVICES</div>
 			<div class="title">WHAT DO WE OFFER</div>
@@ -390,7 +409,7 @@
 		</div>
 	</div>
 	</div>
-	<div class="container">
+	<div class="container" id="portfolio">
 		<div>
 			<div class="a">PORTFOLIO</div>
 			<div class="title">WHAT WE'VE DONE</div>
@@ -471,64 +490,94 @@
 			<div class="a">TESTIMONIAL</div>
 			<div class="title">WHAT THEY ARE SAYING ABOUT US</div>
 		</div>
-		<div class="grid-container4">
-			<div class="test-people">
-				<div style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt,
-					error. Cum beatae ad excepturi sapiente quaerat. At quod neque, maxime tempore quis, error
-					dolor, dolorum porro nostrum minima necessitatibus numquam qui quaerat rerum voluptatibus.
-					Facilis.</div>
-				<div style="height: 100px; width: 100px; border-radius: 50%; overflow: hidden;"><img
-						style=" height:100%;" src="testimonials-1.jpg" alt=""></div>
-				<div style="font-size: xx-large;text-align: center;">Saul Goodman</div>
-				<div style="font-size: large;">CEO & Co-founder</div>
-			</div>
-			<!-- <div class="test-people">
-				<div style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt,
-					error. Cum beatae ad excepturi sapiente quaerat. At quod neque, maxime tempore quis, error
-					dolor, dolorum porro nostrum minima necessitatibus numquam qui quaerat rerum voluptatibus.
-					Facilis.</div>
-				<div style="height: 100px; width: 100px; border-radius: 50%; overflow: hidden;"><img
-						style="width: 100%;" src="testimonials-2.jpg" alt=""></div>
-				<div style="font-size: xx-large;text-align: center;">Sara Willson</div>
-				<div style="font-size: 
-					large;">Designer</div>
-			</div>
-			<div class="test-people">
-				<div style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt,
-					error. Cum beatae ad excepturi sapiente quaerat. At quod neque, maxime tempore quis, error
-					dolor, dolorum porro nostrum minima necessitatibus numquam qui quaerat rerum voluptatibus.
-					Facilis.</div>
-				<div style="height: 100px; width: 100px; border-radius: 50%; overflow: hidden;"><img
-						style="width: 100%;" src="testimonials-3.jpg" alt=""></div>
-				<div style="font-size: xx-large; text-align: center;">Jena Karlis</div>
-				<div style="font-size: large;">Store Owner</div>
-			</div> -->
-			<!-- <div class="test-people">
-					<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, error. Cum beatae ad excepturi sapiente quaerat. At quod neque, maxime tempore quis, error dolor, dolorum porro nostrum minima necessitatibus numquam qui quaerat rerum voluptatibus. Facilis.</div>
-					<div style="height: 100px; border-radius: 50%; overflow: hidden;"><img style="width: 100%;" src="testimonials-4.jpg" alt=""></div>
-					<div>Matt Brandon</div>
-					<div>Freelancer</div>
+		<div class="t-grid">
+			<div class="t-window">
+				<div class="t-virtual-box">
+					<div class="t-inline-block">
+						<div class="test-people">
+							<div style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Nesciunt,
+								error. Cum beatae ad excepturi sapiente quaerat. At quod neque, maxime tempore quis,
+								error
+								dolor, dolorum porro nostrum minima necessitatibus numquam qui quaerat rerum
+								voluptatibus.
+								Facilis.</div>
+							<div style="height: 100px; width: 100px; border-radius: 50%; overflow: hidden;"><img
+									style=" height:100%;" src="testimonials-1.jpg" alt=""></div>
+							<div class="t-name">Saul Goodman</div>
+							<div class="t-job">CEO & Co-founder</div>
+						</div>
+						<div class="test-people">
+							<div style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Nesciunt,
+								error. Cum beatae ad excepturi sapiente quaerat. At quod neque, maxime tempore quis,
+								error
+								dolor, dolorum porro nostrum minima necessitatibus numquam qui quaerat rerum
+								voluptatibus.
+								Facilis.</div>
+							<div style="height: 100px; width: 100px; border-radius: 50%; overflow: hidden;"><img
+									style="width: 100%;" src="testimonials-2.jpg" alt=""></div>
+							<div class="t-name">Sara Willson</div>
+							<div class="t-job">Designer</div>
+						</div>
+						<div class="test-people">
+							<div style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Nesciunt,
+								error. Cum beatae ad excepturi sapiente quaerat. At quod neque, maxime tempore quis,
+								error
+								dolor, dolorum porro nostrum minima necessitatibus numquam qui quaerat rerum
+								voluptatibus.
+								Facilis.</div>
+							<div style="height: 100px; width: 100px; border-radius: 50%; overflow: hidden;"><img
+									style="width: 100%;" src="testimonials-3.jpg" alt=""></div>
+							<div class="t-name">Jena Karlis</div>
+							<div class="t-job">Store Owner</div>
+						</div>
+						<!-- </div>
+                    <div class="t-inline-block"> -->
+						<div class="test-people">
+							<div style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Nesciunt,
+								error. Cum beatae ad excepturi sapiente quaerat. At quod neque, maxime tempore quis,
+								error
+								dolor, dolorum porro nostrum minima necessitatibus numquam qui quaerat rerum
+								voluptatibus.
+								Facilis.</div>
+							<div style="height: 100px; width: 100px; border-radius: 50%; overflow: hidden;"><img
+									style=" height:100%;" src="testimonials-4.jpg" alt=""></div>
+							<div class="t-name">Matt Brandon</div>
+							<div class="t-job">Freelancer</div>
+						</div>
+						<div class="test-people">
+							<div style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Nesciunt,
+								error. Cum beatae ad excepturi sapiente quaerat. At quod neque, maxime tempore quis,
+								error
+								dolor, dolorum porro nostrum minima necessitatibus numquam qui quaerat rerum
+								voluptatibus.
+								Facilis.</div>
+							<div style="height: 100px; width: 100px; border-radius: 50%; overflow: hidden;"><img
+									style=" height:100%;" src="testimonials-5.jpg" alt=""></div>
+							<div class="t-name">John Larson</div>
+							<div class="t-job">Entrepreneur</div>
+						</div>
+					</div>
 				</div>
-				<div class="test-people">
-					<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, error. Cum beatae ad excepturi sapiente quaerat. At quod neque, maxime tempore quis, error dolor, dolorum porro nostrum minima necessitatibus numquam qui quaerat rerum voluptatibus. Facilis.</div>
-					<div style="height: 100px; border-radius: 50%; overflow: hidden;"><img style="width: 100%;" src="testimonials-5.jpg" alt=""></div>
-					<div>John Larson</div>
-					<div>Entrepreneur</div>
-				</div> -->
+			</div>
 		</div>
 	</div>
 
-	<div class="container">
+	<div class="container" id="pricing">
 		<div>
 			<div class="a">PRICING</div>
 			<div class="title">OUR COMPETING PRICES</div>
 		</div>
 		<div class="fl">
-			<div class="price" style="text-align: center;   margin: 0px 10px;">
+			<div class="price" style="text-align: center;">
 				<div style="font-size: 50px; background-color: rgb(233, 233, 233);">
 					Free
 				</div>
-				<div style="font-size: xx-large;"><span style="color: coral;"><sup>$</sup>0</span>/month</div>
+				<div style="font-size: xx-large;"><span style="color: orangered;"><sup>$</sup>0</span>/month</div>
 				<div style="font-size: larger;">
 					Aida dere <br>
 					Nec feugiat nisl <br>
@@ -539,16 +588,15 @@
 					</span>
 				</div>
 				<div style="background-color: rgb(233, 233, 233);"><button
-						style="border-radius: 25px; background-color: coral;color: aliceblue; border: 0px; padding: 5px 15px; cursor:pointer; font-size: xx-large;">Buy
+						style="border-radius: 25px; background-color: orangered;color: aliceblue; border: 0px; padding: 5px 15px; cursor:pointer; font-size: xx-large;">Buy
 						Now</button></div>
 			</div>
-			<div class="price"
-				style="box-sizing: border-box; text-align: center;   border: 1px solid salmon; margin: 0px 10px;">
-				<div style="font-size: 50px;  background-color: coral; color: white;">
+			<div class="price" style="box-sizing: border-box; text-align: center; outline: 1px solid salmon;">
+				<div style="font-size: 50px;  background-color: orangered; color: white;">
 					Business
 				</div>
 				<div style="font-size: xx-large; background-color: white;"><span
-						style="color: coral;"><sup>$</sup>19</span>/month</div>
+						style="color: orangered;"><sup>$</sup>19</span>/month</div>
 				<div style="font-size: larger; background-color: white;">
 					Aida dere <br>
 					Nec feugiat nisl <br>
@@ -559,14 +607,14 @@
 					</span>
 				</div>
 				<div style="background-color: rgb(233, 233, 233);"><button
-						style="border-radius: 25px; background-color: coral;color: aliceblue; border: 0px; padding: 5px 15px; cursor:pointer; font-size: xx-large;">Buy
+						style="border-radius: 25px; background-color: orangered;color: aliceblue; border: 0px; padding: 5px 15px; cursor:pointer; font-size: xx-large;">Buy
 						Now</button></div>
 			</div>
-			<div class="price" style="text-align: center; margin: 0px 10px; ">
+			<div class="price" style="text-align: center;">
 				<div style="font-size: 50px;  background-color: rgb(233, 233, 233);">
 					Developer
 				</div>
-				<div style="font-size: xx-large;"><span style="color: coral;"><sup>$</sup>29</span>/month</div>
+				<div style="font-size: xx-large;"><span style="color: orangered;"><sup>$</sup>29</span>/month</div>
 				<div style="font-size: larger;">
 					Aida dere <br>
 					Nec feugiat nisl <br>
@@ -577,14 +625,14 @@
 					</span>
 				</div>
 				<div style="background-color: rgb(233, 233, 233);"><button
-						style="border-radius: 25px; background-color: coral;color: aliceblue; border: 0px; padding: 5px 15px; cursor:pointer; font-size: xx-large;">Buy
+						style="border-radius: 25px; background-color: orangered;color: aliceblue; border: 0px; padding: 5px 15px; cursor:pointer; font-size: xx-large;">Buy
 						Now</button></div>
 			</div>
-			<div class="price" style="text-align: center; margin: 0px 10px; ">
+			<div class="price" style="text-align: center;">
 				<div style="font-size: 50px; background-color: rgb(233, 233, 233);">
 					Ultimate
 				</div>
-				<div style="font-size: xx-large;"><span style="color: coral;"><sup>$</sup>49</span>/month</div>
+				<div style="font-size: xx-large;"><span style="color: orangered;"><sup>$</sup>49</span>/month</div>
 				<div style="font-size: larger;">
 					Aida dere <br>
 					Nec feugiat nisl <br>
@@ -595,7 +643,7 @@
 					</span>
 				</div>
 				<div style="background-color: rgb(233, 233, 233);"><button
-						style="border-radius: 25px; background-color: coral;color: aliceblue; border: 0px; padding: 5px 15px; cursor:pointer; font-size: xx-large;">Buy
+						style="border-radius: 25px; background-color: orangered;color: aliceblue; border: 0px; padding: 5px 15px; cursor:pointer; font-size: xx-large;">Buy
 						Now</button></div>
 			</div>
 		</div>
@@ -650,7 +698,7 @@
 		</div>
 	</div>
 
-	<div class="container">
+	<div class="container" id="team">
 		<div>
 			<div class="a">Team</div>
 			<div class="title">Our Hardworking team</div>
@@ -735,7 +783,7 @@
 		</div>
 	</div>
 
-	<div class="container">
+	<div class="container" id="contact">
 		<div>
 			<div class="a">Contact</div>
 			<div class="title">CONTACT US</div>
@@ -770,21 +818,25 @@
 				</div>
 			</div>
 			<div class="form-container">
+
+				<!-- <form action=""></form> -->
 				<div class="sub-form-container">
-					<input type="text" width="50%">
-					<input type="text" width="50%">
-					<input type="text">
-					<textarea name="" id=""></textarea>
+					<div class="au">
+						<input type="text" placeholder="Your Name" id="f1" name="name" width="50%">
+						<input type="text" placeholder="Your Email" id="f2" name="email" width="50%">
+					</div>
+					<input type="text" placeholder="Subject" name="subject">
+					<textarea placeholder="Enter Your Message" name="msg" id=""></textarea>
+					<button type="submit" class="btn">Send Message</button>
+					<!-- </form> -->
 				</div>
-
-
 			</div>
 		</div>
 	</div>
-	<div class="container full-bleed2">
+	<div style="background-color: #302c3c;" class="container full-bleed2 full-bleed">
 		<div class="footer">
 			<div class="title">Selecao</div>
-			<div>
+			<div style="text-align: center;">
 				Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi
 				placeat.
 			</div>
@@ -802,7 +854,7 @@
 					<img class="social-photo" width="100%" src="linkedin.svg" alt="">
 				</div>
 			</div>
-			<div>
+			<div style="text-align: center;">
 				© Copyright Selecao. All Right Reserved
 			</div>
 		</div>
@@ -814,6 +866,7 @@
 		for (i = 0; i < accordion.length; i++) {
 			accordion[i].addEventListener("click", function () {
 				this.classList.toggle("active");
+				// this.classList.toggle("blue");
 			});
 		}
 		// For Navbar Color Change OnScroll 
@@ -866,17 +919,31 @@
 			document.getElementById("para").innerText = "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero";
 			// alert("clicked!");
 		}
-		function haambagu() {
+		function hamburger() {
 			// console.log(document.getElementById("nav").style.height);
-			let nav = document.getElementById('nav');
+			let nav2 = document.getElementsByClassName("nav")[0];
+			let nav = document.getElementById("nav");
 			// nav.style = 'height: fit-content;';
 			// nav.style = 'transform:translateY(0%);';
-			if (document.getElementById("nav").style.height == "60px") {
-				nav.style = "height:100%";
+			console.log(nav.style.height);
+			if (nav.style.height == '50px' || nav.style.height == '') {
+				nav.style = "height: 450px;";
+				document.getElementById('bar1').style = 'transform: scaleX(75%);';
+				document.getElementById('bar2').style = 'transform: scaleX(50%);';
+				document.getElementById('bar3').style = 'transform: scaleX(10%);';
 			}
 			else {
-				nav.style = "height:60px";
+				nav.style = "height:50px;";
+				document.getElementById('bar1').style = 'transform: rotate(0deg);';
+				document.getElementById('bar2').style = 'display:block;';
+				document.getElementById('bar3').style = 'transform: rotate(0deg);';
 			}
+			// if (document.getElementsByClassName("navlinks")[0].style.height == "60px") {
+			// 	nav.style = "transform:scaleY(100%);";
+			// }
+			// else {
+			// 	nav.style = "transform:scaleY(0%);";
+			// }
 
 			// if (document.getElementById("dd").style.display == "block") {
 			// 	element.classList.remove("navbar");
@@ -906,7 +973,7 @@
 			for (let i = 0; i < a.length; i++) {
 				a[i].style.background = "white";
 			}
-			document.getElementById("blogger").style.background = "coral";
+			document.getElementById("blogger").style.background = "orangered";
 			document.getElementById("cli").style.fill = "black";
 			document.getElementById("woi").style.fill = "black";
 			document.getElementById("wii").style.fill = "black";
@@ -922,7 +989,7 @@
 			for (let i = 0; i < a.length; i++) {
 				a[i].style.background = "white";
 			}
-			document.getElementById("wix").style.background = "coral";
+			document.getElementById("wix").style.background = "orangered";
 			document.getElementById("cli").style.fill = "black";
 			document.getElementById("woi").style.fill = "black";
 			document.getElementById("bli").style.fill = "black";
@@ -938,7 +1005,7 @@
 			for (let i = 0; i < a.length; i++) {
 				a[i].style.background = "white";
 			}
-			document.getElementById("wordpress").style.background = "coral";
+			document.getElementById("wordpress").style.background = "orangered";
 			document.getElementById("cli").style.fill = "black";
 			document.getElementById("wii").style.fill = "black";
 			document.getElementById("bli").style.fill = "black";
@@ -954,7 +1021,7 @@
 			for (let i = 0; i < a.length; i++) {
 				a[i].style.background = "white";
 			}
-			document.getElementById("cloudflare").style.background = "coral";
+			document.getElementById("cloudflare").style.background = "orangered";
 			document.getElementById("woi").style.fill = "black";
 			document.getElementById("wii").style.fill = "black";
 			document.getElementById("bli").style.fill = "black";
@@ -1059,6 +1126,51 @@
 				u = 0;
 			}
 		}
+		transitionEndCallback3 = (e) => {
+			// u++;
+			// if (u == 3) {
+			let text2 = document.getElementsByClassName('test-people');
+			let text3 = document.getElementsByClassName('t-virtual-box');
+			text3[0].removeEventListener(transitionEvent, transitionEndCallback3);
+			// for (let i = 0; i <div text.length; i++) {
+			//     text2[i].removeEventListener(transitionEvent, transitionEndCallback3);
+			// }
+			// let text = document.getElementsByClassName('test-people');
+			let vbox = document.getElementsByClassName('t-window');
+			// vbox[0].classList.remove('t-slide-25');
+			// console.log(text[0].textContent);
+			console.log(two);
+			vbox[0].innerHTML = '<div class="t-virtual-box">' + '<div class="t-inline-block">' + '<div class="test-people">' + two[0] + '</div><div class="test-people">' + two[1] + '</div><div class="test-people">' + two[2] + '</div><div class="test-people">' + two[3] + '</div><div class="test-people">' + two[4] + '</div></div>' + '</div>';
+			// vbox[0].innerHTML = '<div class="t-inline-block">' + '<div class="test-people">' + two[0] + '</div><div class="test-people">' + two[1] + '</div><div class="test-people">' + two[2] + '</div><div class="test-people">' + two[3] + '</div><div class="test-people">' + two[4] + '</div></div>';
+			text2 = document.getElementsByClassName('inline-block');
+			counter++;
+			console.log(e);
+			u = 0;
+			// }
+		}
+		function abcd() {
+			let text = document.getElementsByClassName('t-virtual-box');
+			let text2 = document.getElementsByClassName('test-people');
+			console.log('slide');
+			two = [];
+			two.push(text2[1].innerHTML);
+			two.push(text2[2].innerHTML);
+			two.push(text2[3].innerHTML);
+			two.push(text2[4].innerHTML);
+			two.push(text2[0].innerHTML);
+			// text[1].classList.add('t-slide-25');
+			// text[2].classList.add('slide-100');
+			// text[3].classList.add('slide-100');
+			// text[4].classList.add('slide-100');
+			text[0].classList.add('t-slide-25');
+			text[0].addEventListener(transitionEvent, transitionEndCallback3);
+			// text[1].addEventListener(transitionEvent, transitionEndCallback3);
+			// text[2].addEventListener(transitionEvent, transitionEndCallback3);
+			// text[3].addEventListener(transitionEvent, transitionEndCallback3);
+			// text[4].addEventListener(transitionEvent, transitionEndCallback3);
+		}
+
+		setInterval(abcd, 3000);
 	</script>
 </body>
 
